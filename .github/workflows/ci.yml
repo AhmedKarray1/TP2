@@ -61,13 +61,7 @@ jobs:
       - name: Run unit tests with coverage
         run: npm run test:cov
 
-      - name: Upload coverage report to Codecov
-        uses: codecov/codecov-action@v4
-        with:
-          file: ./coverage/lcov.info
-          flags: unittests
-          name: codecov
-          fail_ci_if_error: false
+      
 
   sast:
     name: SAST
